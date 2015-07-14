@@ -1,0 +1,36 @@
+<div class="modal slide-in-up">
+  <header class="bar bar-header bar-positive">
+    <h1 class="title">Setting</h1>
+    <button class="button button-icon icon ion-ios-close" ng-click="closeSetting()"></button>
+  </header>
+  <ion-content class="padding has-header">
+   	<div class="card">
+      <div class="item item-text-wrap">
+        <div class="list">
+          <form name="editSettingForm" novalidate>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">YT API Key</span>
+              <input type="text" placeholder="YouTube API Key" ng-model="youtubeParams.key" ng-required="true">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Search</span>
+              <input type="text" placeholder="Search" ng-model="youtubeParams.q" ng-required="true">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Channel Id</span>
+              <input type="text" placeholder="Channel Id" ng-model="youtubeParams.channelId" ng-required="true">
+            </label>
+            <label>
+              <button class="button button-block button-positive" ng-disabled="editSettingForm.$invalid" ng-click="closeSetting()">
+                Update Setting
+              </button>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+	
+  </ion-content>
+</div>

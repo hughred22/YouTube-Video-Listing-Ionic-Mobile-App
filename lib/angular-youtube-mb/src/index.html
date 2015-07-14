@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular YouTube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Oswald:400">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        color: #444;
+        font-family: "Arial", sans-serif;
+      }
+
+      header {
+        width: 100%;
+        background-color: #77BCF6;
+        color: #FFF;
+        padding: 2.0rem 1.0rem;
+        text-align: center;
+        border-bottom: 3px solid #FFACAC;
+      }
+
+      h1, h2, h3, h4, h5 {
+        font-family: "Oswald", sans-serif;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin: 0.8rem 0;
+        text-shadow: 1px 1px 1px #4181B8;
+      }
+
+      h3 {
+        font-size: 2.0rem;
+        line-height: 1.3;
+        margin: 0.6rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.3;
+      }
+
+      code {
+        font-family: Courier, monospace;;
+        margin: 1.0rem 0;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .video-wrapper {
+        margin: 4.0rem 0;
+      }
+
+      .video-detail {
+        margin: 1.0rem 2.0rem;
+        border-left: 6px solid #FFACAC;
+        padding: 0.6rem;
+      }
+
+      .controls {
+        margin: 1.0rem 2.0rem;
+      }
+
+      .controls .border-button {
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
+
+      .play,
+      .pause {
+        width: 49%;
+      }
+
+      .toggle {
+        width: 100%;
+      }
+
+      .pause {
+        float: right;
+      }
+
+      footer {
+        text-align: center;
+        padding-bottom: 6.0rem;
+      }
+
+      .border-button {
+        color: #77BCF6;
+        background-color: #FFF;
+        font-family: "Oswald", sans-serif;
+        border: 2px solid #77BCF6;
+        border-radius: 4px;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+
+        transition: box-shadow 300ms;
+      }
+
+      .border-button:hover {
+        box-shadow: 0px 2px 4px rgba(119, 188, 246, 0.5);
+      }
+
+      .border-button:active {
+        transform: translateY(2px);
+      }
+
+      .view-github {
+        display: block;
+        margin: 0 1.0rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        padding: 1.0rem 0.8rem;
+      }
+
+      .view-advanced {
+        display: inline-block;
+        text-decoration: none;
+        color: #444;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        margin-top: 1.0rem;
+      }
+
+      .view-advanced:hover {
+        border-bottom: 2px solid #77BCF6;
+      }
+
+      /* .embed-* is from bootstrap, for responsive videos */
+      .embed-responsive {
+        position: relative;
+        display: block;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgba(240, 240, 240, 0.4);
+      }
+
+      .embed-responsive.embed-responsive-16by9 {
+        padding-bottom: 56.25%;
+      }
+
+      .embed-responsive-item {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      /* hljs is higlight.js, for code blocks */
+      .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 1.0rem;
+        background: rgba(240, 240, 240, 0.4);
+        -webkit-text-size-adjust: none;
+        font-size: 1.1rem;
+        border-radius: 4px;
+      }
+
+      .hljs-keyword,.hljs-id,.hljs-title,.hljs-built_in,.css .hljs-tag,.hljs-javadoctag,.hljs-phpdoc,.hljs-dartdoc,.hljs-yardoctag,.smalltalk .hljs-class,.hljs-winutils,.bash .hljs-variable,.apache .hljs-tag,.hljs-type,.hljs-typename,.tex .hljs-command,.asciidoc .hljs-strong,.markdown .hljs-strong,.hljs-request,.hljs-status {
+        font-weight: 700;
+      }
+
+      .hljs-title,
+      .hljs-keyword {
+        color: #659FD0;
+      }
+
+      .hljs-comment {
+        color: #99B1BB;
+      }
+
+      .hljs-value,
+      .hljs-string {
+        color: #E87E7E;
+      }
+
+      .hljs span {
+        line-height: 1.2;
+      }
+
+      ::selection {
+        background: #FFACAC;
+      }
+      ::-moz-selection {
+        background: #FFACAC;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Angular YouTube Embed</h1>
+        <p>Embed a YouTube player with a simple directive</p>
+      </div>
+    </header>
+
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-route.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="angular-youtube-embed.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+    <script src="demo/the.js"></script>
+  </body>
+</html>
