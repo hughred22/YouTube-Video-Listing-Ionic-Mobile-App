@@ -15,6 +15,7 @@
     });
   });
 
+  //**** Version 2: Refactory codes to use pull to refresh, and infinite scroll ***//
   app.controller('mycontroller', function($scope, $http, $ionicModal){
 
     $scope.videos = [];
@@ -92,6 +93,36 @@
     };
 
   });
+
+  //**** Version 1: Simply display Data retrun from YouTube API V3 ***//
+  // app.controller('mycontroller', function($scope, $http){
+
+  //   $scope.videos = [];
+
+  //   $scope.playerVars = {
+  //     rel: 0,
+  //     showinfo: 0,
+  //     modestbranding: 0,
+  //   }
+
+  //   $scope.youtubeParams = {
+  //     key: 'AIzaSyAnAi9xKNqI_xNGDKHtFZrInz5l_QkMqNs',
+  //     type: 'video',
+  //     maxResults: '5',
+  //     part: 'id,snippet',
+  //     q: 'creatorup',
+  //     order: 'date',
+  //     channelId: 'UCeEqIv7lVwOOLnwxuuhQFuQ',
+  //   }
+
+  //   $http.get('https://www.googleapis.com/youtube/v3/search', {params: $scope.youtubeParams}).success(function(response){
+  //     angular.forEach(response.items, function(child){
+  //       $scope.videos.push(child);
+  //     });
+  //   });
+
+  // });
+  //**** Version 1 End ***//
 
 }()); // make app varialbe just for this scope and not global
 
