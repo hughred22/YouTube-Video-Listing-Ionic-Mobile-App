@@ -4,7 +4,19 @@
     <button class="button button-icon icon ion-ios-close" ng-click="closeSetting()"></button>
   </header>
   <ion-content class="padding has-header">
-   	<div class="card">
+    <ul class="list">
+      <li class="item item-toggle">
+         Use WordPress API
+         <label class="toggle toggle-positive">
+           <input type="checkbox" ng-model="wordpress.show" ng-click="wordpress.useWordpress()">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+         </label>
+      </li>
+    </ul>
+    <!-- <p>{{wordpress}}</p> -->
+   	<div class="card" ng-show="!wordpress.show">
       <div class="item item-text-wrap">
         <div class="list">
           <form name="editSettingForm" novalidate>

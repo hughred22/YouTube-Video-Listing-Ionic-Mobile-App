@@ -21,3 +21,71 @@
   height: 100%;
   border: 0;
 }
+
+/* Ravetrain App style */
+
+/*.bar.bar-dark {
+  background: none;
+}
+.header-image {
+  height: 150px;
+  background-image: url(../img/ravetrain-bg.jpg);
+  background-position: center center;
+}
+
+.bar-dark .button {
+  color: white;
+}
+
+.button.button-positive.button-outline {
+  border-color: white;
+  background: transparent;
+  color: white;
+}
+
+.button.button-positive.button-outline.activated {
+  background: white;
+  color: purple;
+}
+
+.has-header.has-noheader {
+  top: 0;
+}
+
+.item h2 {
+  font-family: 'Lato', 'Helvetica Neue', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: purple;
+}
+
+.item p {
+  font-family: 'Lato', 'Helvetica Neue', Roboto, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.card {
+  margin: 0;
+}
+
+.card .item:last-child, .list-inset .item:last-child, .padding > .list .item:last-child {
+  border-radius: 0;
+}
+
+.item-divider {
+  background-color: purple;
+  border: 0;
+}
+
+.button {
+  font-family: 'Lato', 'Helvetica Neue', Roboto, sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.button.button-outline {
+  border-radius: 50px;
+}*/
