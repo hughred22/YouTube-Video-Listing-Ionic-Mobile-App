@@ -1,0 +1,22 @@
+{
+  "version": "1.1.1",
+  "name": "angular-ios9-uiwebview-patch",
+  "description": "Bower and NPM support for IgorMinar's iOS9 Patch for Angular 1.2.0-1.4.5: https://gist.github.com/IgorMinar/863acd413e3925bf282c",
+  "main": [
+    "angular-ios9-uiwebview-patch.js"
+  ],
+  "ignore": [
+    "**/*.json"
+  ],
+  "homepage": "https://github.com/azaslavsky/angular-ios9-uiwebview-patch",
+  "_release": "1.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.1",
+    "commit": "c358ec9e7fc495df818cd80371798783989b1aa7"
+  },
+  "_source": "git://github.com/azaslavsky/angular-ios9-uiwebview-patch.git",
+  "_target": "~1.1.1",
+  "_originalSource": "angular-ios9-uiwebview-patch",
+  "_direct": true
+}

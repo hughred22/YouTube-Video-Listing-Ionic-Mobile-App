@@ -2,7 +2,7 @@
 (function() {
 
   //Make it expressive by introducing new variable app. App now in global space (bad practics)
-  var app = angular.module('youtubevideo', ['ionic', 'youtube-embed', 'ngCordova']);
+  var app = angular.module('youtubevideo', ['ionic', 'youtube-embed', 'ngCordova', 'ngIOS9UIWebViewPatch']);
 
   app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
