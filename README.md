@@ -1,4 +1,4 @@
-# Checkout Updated Ionic2/Angular2 Version
+# Check out the Updated Ionic2/Angular2 Version
 A better / upgraded version of this app is [Here](https://github.com/hughred22/Ionic2-Angular2-YouTube-Channel-App) 
 It is rebuilt from ground up with Ionic 2 with more features. Check it out now. I won't actively update this repo anymore as Ionic 1 version is retired.
 
