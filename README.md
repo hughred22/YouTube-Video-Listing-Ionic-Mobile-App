@@ -1,8 +1,8 @@
-# YouTube Video Listing Ionic Mobile App
-
 # Checkout Updated Ionic2/Angular2 Version
 A better / upgraded version of this app is [Here](https://github.com/hughred22/Ionic2-Angular2-YouTube-Channel-App) 
 It is rebuilt from ground up with Ionic 2 with more features. Check it out now. I won't actively update this repo anymore as Ionic 1 version is retired.
+
+# YouTube Video Listing Ionic Mobile App
 
 A hybrid mobile app build with Ionic Framework, AngularJS and YouTube API V3. I also added code to get data from WordPress using WP REST API: http://wp-api.org/
 
